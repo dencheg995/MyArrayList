@@ -3,7 +3,7 @@ import java.util.List;
 public class MyArrayList<E> implements MyList<E> {
 private int INIT_SIZE = 16;
 private Object[] ArrList = new Object[INIT_SIZE];
-private int point = 0;
+private int point = 0; //size ArrayList
 
 
     @Override
