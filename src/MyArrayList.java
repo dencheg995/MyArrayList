@@ -51,10 +51,12 @@ private int point = 0; //size ArrayList
         for(int i = 0; i < point; i++){
             if(element.equals(ArrList[i])){
                 ArrList[i] = null;
+
                 System.arraycopy(ArrList, i+1, ArrList, i, point - i);
+
             }
         }
-        point--;
+    point--;
     }
 
     public boolean isEmpty(){
@@ -65,9 +67,12 @@ private int point = 0; //size ArrayList
     public boolean contains(E element){
         if(element == null) {
             for (int i = 0; i < point; i++) {
-                ArrList[i] = null;
-                return true;
-
+                if(ArrList[i] == null) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
             }
         }
         else {
